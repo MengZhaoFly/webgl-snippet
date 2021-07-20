@@ -2,7 +2,6 @@ import { Mesh } from '../model/Mesh'
 export const d2_f = (x, y, width, height, thickness) => {
 // 定义的就是三角形的顶点
   const data = [
-    // 6个点 两个三角形
     // left column
     x, y,
     x + thickness, y,
@@ -11,7 +10,6 @@ export const d2_f = (x, y, width, height, thickness) => {
     x + thickness, y,
     x + thickness, y + height,
 
-    // 6个点 两个三角形
     // top rung
     x + thickness, y,
     x + width, y,
@@ -20,7 +18,6 @@ export const d2_f = (x, y, width, height, thickness) => {
     x + width, y,
     x + width, y + thickness,
 
-    // 6个点 两个三角形
     // middle rung
     x + thickness, y + thickness * 2,
     x + width * 2 / 3, y + thickness * 2,
