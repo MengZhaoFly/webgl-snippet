@@ -1,6 +1,6 @@
 import { Mesh } from '../model/Mesh'
 export const d2_f = (x, y, width, height, thickness) => {
-
+// 定义的就是三角形的顶点
   const data = [
     // 6个点 两个三角形
     // left column
@@ -30,5 +30,7 @@ export const d2_f = (x, y, width, height, thickness) => {
     x + width * 2 / 3, y + thickness * 3,
   ]
 
-  return new Mesh({vertices : data, dimension : 2})
+  return new Mesh({
+    vertices : data,
+    dimension : 2})
 }

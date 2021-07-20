@@ -10,6 +10,8 @@ export const d3_cube = (useColor = true, useTexture = false, useNorms = false) =
     0,0,0,1,1,1,1,0,
     0,0,0,1,1,1,1,0,
   ]
+  // 定义的是 立方体 24 个顶点
+  // 6个面 每个面有4个顶点 有两个三角形构成 每三个数字代表一个 点（三纬的）
   const vertices = [
     // 左
     -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1,
@@ -24,6 +26,8 @@ export const d3_cube = (useColor = true, useTexture = false, useNorms = false) =
     -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, -1, -1,
     -1, 1, -1, -1, 1, 1, 1, 1, 1, 1, 1, -1,
   ]
+  // 那三个点 构成一个三角形
+  // 12个三角形
   const indices = [
     0,1,2,0,2,3,
     4,5,6,4,6,7,
@@ -92,8 +96,12 @@ export const d3_cube = (useColor = true, useTexture = false, useNorms = false) =
   // ]
 
 
-  return new Mesh({ vertices, indices, 
+  return new Mesh({ 
+    vertices,
+    indices,
+    dimension: 3,
     colors: useColor && colors, 
+    texCoords : useTexture && texCoords,
     norms : useNorms && norms,
-    texCoords : useTexture && texCoords })
+  })
 }

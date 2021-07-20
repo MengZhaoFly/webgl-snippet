@@ -26,7 +26,7 @@ export default class GLVertexBuffer {
     this.location = 
       this.gl.getAttribLocation(RenderContext.getProgram(), this.name)
     this.gl.enableVertexAttribArray(this.location)
-    // this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.buffer)
+    this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.buffer)
     const type = this.gl.FLOAT
     const normalized = false
     const stride = 0

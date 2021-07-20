@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs')
 
 const apps = fs.readdirSync(path.resolve(__dirname, "apps"))
-
+console.log('apps dir', apps);
 const entry = {}
 apps.forEach(app => {
   entry[app] = path.resolve(__dirname, "apps", app, 'index.js')
